@@ -37,9 +37,6 @@
     "registry": "https://registry.npmjs.org"
   },
   "release-it": {
-    "hooks": {
-      "before:release": "yarn update-docs"
-    },
     "plugins": {
       "release-it-lerna-changelog": {
         "infile": "CHANGELOG.md"
