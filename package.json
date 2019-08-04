@@ -1,6 +1,6 @@
 {
   "name": "ember-codemods-telemetry-helpers",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Helpers for gathering app telemetry for codemods.",
   "main": "lib/index.js",
   "repository": "https://github.com/ember-codemods/ember-codemods-telemetry-helpers",
