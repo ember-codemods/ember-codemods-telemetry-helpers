@@ -24,5 +24,6 @@ That codemod uses (puppeteer)(https://github.com/GoogleChrome/puppeteer) (via th
 The idea for the extraction was to put the harness in this package 
 (extracted from the native class codemod), but have the actual "telemetry gathering" 
 live in each individual codemod project because the things that they need are quite different
-for example, for [implicit this codemod]() and [angle brackets codemod]() all we need to know is an array of the helpers and components in the app
-but for native class codemod it needs much more info (names and types of methods, properties, etc on each default export)
+for example, for [implicit this codemod](https://github.com/ember-codemods/ember-no-implicit-this-codemod) and 
+[angle brackets codemod](https://github.com/ember-codemods/ember-angle-brackets-codemod) all we need to know is an array of the helpers and components in the app
+but for [native class codemod](https://github.com/ember-codemods/ember-native-class-codemod) it needs much more info (names and types of methods, properties, etc on each default export)
