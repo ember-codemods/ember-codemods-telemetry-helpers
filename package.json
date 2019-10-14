@@ -12,7 +12,7 @@
   "private": false,
   "scripts": {
     "lint:js": "eslint .",
-    "test": "jest .",
+    "test": "jest .  --verbose --no-watchman --runInBand",
     "release": "release-it"
   },
   "dependencies": {

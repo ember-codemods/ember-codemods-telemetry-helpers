@@ -18,4 +18,4 @@ install:
 
 script:
   - yarn lint:js
-  - yarn test --forceExit
+  - yarn test
