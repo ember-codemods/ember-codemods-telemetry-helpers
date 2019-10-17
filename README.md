@@ -52,8 +52,13 @@ All invocations of `gatherTelemetryForUrl` internally returns an object enumerat
   'input/helpers/pluralize': true,
   'input/helpers/singularize': true,
 }
-
 ```
+This package does provide one gathering function: `analyzeEmberObject`.  The function does a "best effort" analysis of the app runtime, return such things as most Ember object types (Components, Helpers, Routes, etc) and "own" properties.
+
+```javascript
+const { analyzeEmberObject } = require('ember-codemods-telemetry-helpers');
+```
+
 ## Contributing
 
 ### Installation
