@@ -4,16 +4,16 @@
 
 
 Telemetry helpers runs the app, grabs basic info about all of the modules at runtime.
-This allows the codemod to know the names of every helper, component, route, controller, etc in the app without guessing / relying on static analysis.
+This allows the codemod to know the names of every helper, component, route, controller, etc. in the app without guessing / relying on static analysis.
 They basically help you to create "runtime assisted codemods".
 
 ## Goal
-The goal of the project though was to enable each codemod to manage its own type of data gathering
-and that the gather-telemetry-helpers package provides the harness to run that custom gathering function
+The goal of this project is to enable each codemod to manage its own type of data gathering
+and that this package provides the harness to run that custom gathering function.
 
 ## Usage
 
-Assuming you are authoring a codemod with [codemod-cli](https://github.com/rwjblue/codemod-cli), `ember-codemods-telemetry-helpers` allows you freedom to assign your own "telemetry gathering" function while provide one of its own out of the box (opt-in).
+Assuming you are authoring a codemod with [codemod-cli](https://github.com/rwjblue/codemod-cli), `ember-codemods-telemetry-helpers` allows you the freedom to assign your own "telemetry gathering" function while provide one of its own out of the box (opt-in).
 
 ```javascript
 #!/usr/bin/env node
@@ -42,7 +42,7 @@ function findHelpers(possibleEmberObject) {
 })();
 ```
 
-All invocations of `gatherTelemetryForUrl` internally returns an object enumerated with properties named after all possible entries within `window.require.entries`.  The values of each property is the value returned from within the gathering function.  Usuing the example above, the output might be (for example):
+All invocations of `gatherTelemetryForUrl` internally returns an object enumerated with properties named after all possible entries within `window.require.entries`.  The values of each property is the value returned from within the gathering function.  Usuing the example above, the output might be:
 
 ```javascript
 {
@@ -53,11 +53,24 @@ All invocations of `gatherTelemetryForUrl` internally returns an object enumerat
   'input/helpers/singularize': true,
 }
 ```
-This package does provide one gathering function: `analyzeEmberObject`.  The function does a "best effort" analysis of the app runtime, return such things as most Ember object types (Components, Helpers, Routes, etc) and "own" properties.
+This package provides one gathering function: `analyzeEmberObject`.  The function does a "best effort" analysis of the app runtime, returning such things as Components, Helpers, Routes, etc. and their particular properties.
 
 ```javascript
 const { analyzeEmberObject } = require('ember-codemods-telemetry-helpers');
 ```
+
+## Upgrading from `0.5.0`
+
+After `0.5.0`,  a few breaking changes occured.
+
+  * `gatherTelemetryForUrl` requires a function as it's second argument to do work.  This is refer to as a "gathering function". The default `analyzeEmberObject` can be used here.
+  * The optional `puppeteerArgs` have been moved to the last arg position of `gatherTelemetryForUrl`.
+
+  Therefore:
+  ```javascript
+    gatherTelemetryForUrl(url, gatherFunction, puppeteerArgs);
+  ```
+
 
 ## Contributing
 
