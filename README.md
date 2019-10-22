@@ -59,6 +59,13 @@ This package does provide one gathering function: `analyzeEmberObject`.  The fun
 const { analyzeEmberObject } = require('ember-codemods-telemetry-helpers');
 ```
 
+## Caveats
+If the gather function references functions defined outside of the the gather function body, all of those functions must be exported as well.  It is strongly suggested that the gather function be self contained, and if functions must be used (code maintainability/readability), that they be defined within the function.  If this is not possible, the `gatherTelemetryForUrl` has been enhanced to accept all functions that must go along with the gather function:
+
+```javascript
+gatherTelemetryForUrl(appLocation, gatherFunction, suppportFn1, suppportFn2, ..., puppeteerArgs);
+```
+
 ## Contributing
 
 ### Installation
