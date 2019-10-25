@@ -1,19 +1,21 @@
 {
   "name": "ember-codemods-telemetry-helpers",
   "version": "0.5.0",
+  "private": false,
   "description": "Helpers for gathering app telemetry for codemods.",
-  "main": "lib/index.js",
   "repository": "https://github.com/ember-codemods/ember-codemods-telemetry-helpers",
+  "license": "MIT",
   "author": "",
   "contributors": [
     "Ryan Mark <rgmark@gmail.com>"
   ],
-  "license": "MIT",
-  "private": false,
+  "main": "lib/index.js",
   "scripts": {
     "lint:js": "eslint .",
-    "test": "jest . --verbose --no-watchman --runInBand --forceExit",
-    "release": "release-it"
+    "test": "jest . --verbose --no-watchman --runInBand --forceExit"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "dependencies": {
     "fs-extra": "^8.1.0",
@@ -35,9 +37,6 @@
   },
   "engines": {
     "node": "8.* || 10.* || >= 12.*"
-  },
-  "jest": {
-    "testEnvironment": "node"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
