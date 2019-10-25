@@ -61,3 +61,4 @@ typings/
 .next
 
 test/fixtures/classic-app/dist/
+lib/gather/cli.js
