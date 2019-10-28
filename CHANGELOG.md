@@ -1,3 +1,11 @@
+## v1.0.1 (2019-10-28)
+
+#### :bug: Bug Fix
+* [#22](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/22) `analyzeEmberObject()` exits too early not allowing to enumerate `helpers` ([@tylerturdenpants](https://github.com/tylerturdenpants))
+
+#### Committers: 1
+- Ryan Mark ([@tylerturdenpants](https://github.com/tylerturdenpants))
+
 ## v1.0.0 (2019-10-25)
 
 #### :boom: Breaking Change
