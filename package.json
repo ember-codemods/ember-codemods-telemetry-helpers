@@ -11,6 +11,7 @@
   ],
   "main": "lib/index.js",
   "scripts": {
+    "debug": "DEBUG=true node scripts/debug.js",
     "lint:js": "eslint .",
     "test": "jest . --verbose --no-watchman --runInBand --forceExit"
   },
