@@ -70,7 +70,7 @@ After `0.5.0`,  a few breaking changes occured.
   ```javascript
     gatherTelemetryForUrl(url, gatherFunction, puppeteerArgs);
   ```
- 
+
 ## Caveats
 If the gather function references functions defined outside of the the gather function body, all of those functions must be exported as well.  It is strongly suggested that the gather function be self contained, and if functions must be used (code maintainability/readability), that they be defined within the function.  If this is not possible, the `gatherTelemetryForUrl` has been enhanced to accept all functions that must go along with the gather function:
 
@@ -89,6 +89,18 @@ gatherTelemetryForUrl(appLocation, gatherFunction, suppportFn1, suppportFn2, ...
 ### Running tests
 
 * `yarn test`
+
+### Debugging
+
+Debugging telemetry collection will require an app to collect telemetry from.
+
+For example, in the no-implicit-this codemod, one may add a `debugger;` in `analyzeEmberObject`, which runs inside of puppeteer, and have the `debugger;` / breakpoint triggered after booting an app and running a script like the following defined in the codemod:
+
+```
+"debug:telemetry": "DEBUG=true node --inspect-brk ./bin/telemetry.js",
+```
+
+`DEBUG=true` will pass the puppeteer options: `{ headless; false, devtools: true }`, allowing you to inspect telemetry gathering. Without `DEBUG=true`, it is only possible to debug the script that wraps the launching of puppeteer.
 
 ## More info
 
