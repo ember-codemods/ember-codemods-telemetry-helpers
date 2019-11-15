@@ -96,8 +96,8 @@ See "Gathering runtime data" section of
 https://github.com/ember-codemods/ember-native-class-codemod#gathering-runtime-data for some additonal info
 
 
-This project was extracted from (ember-native-class-codemod)(https://github.com/ember-codemods/ember-native-class-codemod).
-That codemod uses (puppeteer)(https://github.com/GoogleChrome/puppeteer) (via this lib) to visit the Ember app and gather telemetry necessary to convert to native classes.
+This project was extracted from [ember-native-class-codemod](https://github.com/ember-codemods/ember-native-class-codemod).
+That codemod uses [puppeteer](https://github.com/GoogleChrome/puppeteer) (via this lib) to visit the Ember app and gather telemetry necessary to convert to native classes.
 
 The idea for the extraction was to put the harness in this package
 (extracted from the native class codemod), but have the actual "telemetry gathering"
