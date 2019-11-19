@@ -1,3 +1,15 @@
+## v1.1.0 (2019-11-19)
+
+#### :bug: Bug Fix
+* [#25](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/25) Enumerate Component templates. ([@tylerturdenpants](https://github.com/tylerturdenpants))
+
+#### :memo: Documentation
+* [#24](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/24) Fix link in README.md ([@ursm](https://github.com/ursm))
+
+#### Committers: 2
+- Keita Urashima ([@ursm](https://github.com/ursm))
+- Ryan Mark ([@tylerturdenpants](https://github.com/tylerturdenpants))
+
 ## v1.0.1 (2019-10-28)
 
 #### :bug: Bug Fix
