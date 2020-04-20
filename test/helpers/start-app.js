@@ -10,6 +10,10 @@ module.exports = async function startApp(appPath) {
   await execa('yarn', ['install'], execOpts);
 
   console.log('starting serve');
+
+  // `yarn` has a bug where even if the process gets killed, it leaves the child process (ember in this case) orphaned.
+  // Hence we are using `ember` directly here to overcome the above shortcoming and ensure that the ember process is always killed
+  // cleanly.
   const emberServe = execa('ember', ['serve'], execOpts);
   emberServe.stdout.pipe(process.stdout);
 
@@ -28,9 +32,6 @@ module.exports = async function startApp(appPath) {
       await this;
     } catch (e) {
       // Process is allowed to exit with a non zero exit status code.
-    }
-    if (!this.killed) {
-      throw new Error(`the process ${this.pid} wasn't killed.`);
     }
   };
 
