@@ -3,14 +3,18 @@ const path = require('path');
 
 module.exports = async function startApp(appPath) {
   const classicAppDir = path.resolve(appPath);
-  const execOpts = { cwd: classicAppDir, stderr: 'inherit' };
+  const execOpts = { cwd: classicAppDir, stderr: 'inherit', preferLocal: true };
   console.log('installing deps');
 
   await execa('rm', ['-rf', 'node_modules'], execOpts);
   await execa('yarn', ['install'], execOpts);
 
   console.log('starting serve');
-  const emberServe = execa('yarn', ['start'], execOpts);
+
+  // `yarn` has a bug where even if the process gets killed, it leaves the child process (ember in this case) orphaned.
+  // Hence we are using `ember` directly here to overcome the above shortcoming and ensure that the ember process is always killed
+  // cleanly.
+  const emberServe = execa('ember', ['serve'], execOpts);
   emberServe.stdout.pipe(process.stdout);
 
   await new Promise(resolve => {
@@ -21,6 +25,15 @@ module.exports = async function startApp(appPath) {
       }
     });
   });
+
+  emberServe.shutdown = async function() {
+    this.kill();
+    try {
+      await this;
+    } catch (e) {
+      // Process is allowed to exit with a non zero exit status code.
+    }
+  };
 
   return { emberServe };
 };
