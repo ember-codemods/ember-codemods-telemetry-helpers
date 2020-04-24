@@ -1,3 +1,11 @@
+## v1.2.1 (2020-04-24)
+
+#### :bug: Bug Fix
+* [#30](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/30) Ensure `setTelemetryWithKey` is exported properly. ([@suchitadoshi1987](https://github.com/suchitadoshi1987))
+
+#### Committers: 1
+- Suchita Doshi ([@suchitadoshi1987](https://github.com/suchitadoshi1987))
+
 ## v1.2.0 (2020-04-24)
 
 #### :rocket: Enhancement
