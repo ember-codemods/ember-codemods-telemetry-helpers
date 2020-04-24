@@ -1,3 +1,15 @@
+## v1.2.0 (2020-04-24)
+
+#### :rocket: Enhancement
+* [#28](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/28) Add single telemetry support ([@suchitadoshi1987](https://github.com/suchitadoshi1987))
+#### :bug: Bug Fix
+* [#27](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/27) Fix colon character in cwd on Windows ([@sinankeskin](https://github.com/sinankeskin))
+
+
+#### Committers: 2
+- Sinan Keskin ([@sinankeskin](https://github.com/sinankeskin))
+- Suchita Doshi ([@suchitadoshi1987](https://github.com/suchitadoshi1987))
+
 ## v1.1.0 (2019-11-19)
 
 #### :bug: Bug Fix
