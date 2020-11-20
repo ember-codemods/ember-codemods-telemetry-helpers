@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.0.0 (2020-11-20)
+
+#### :boom: Breaking Change
+* [#33](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/33) Drop Node < 10 ([@rjschie](https://github.com/rjschie))
+
+#### :bug: Bug Fix
+* [#35](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/35) Update `DEFAULT_PUPPETEER_ARGS` to launch Chrome with the `--no-sandbox` argument ([@shivani2692](https://github.com/shivani2692))
+
+#### Committers: 2
+- Ryan Schie ([@rjschie](https://github.com/rjschie))
+- [@shivani2692](https://github.com/shivani2692)
+
+
 ## v1.2.1 (2020-04-24)
 
 #### :bug: Bug Fix
