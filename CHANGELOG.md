@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.1.0 (2021-04-13)
+
+#### :rocket: Enhancement
+* [#40](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/40) Support add-on dummy app files ([@xg-wang](https://github.com/xg-wang))
+
+#### :house: Internal
+* [#41](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/41) Add basic GitHub Actions setup ([@rwjblue](https://github.com/rwjblue))
+
+#### Committers: 2
+- Robert Jackson ([@rwjblue](https://github.com/rwjblue))
+- Thomas Wang ([@xg-wang](https://github.com/xg-wang))
+
+
 ## v2.0.0 (2020-11-20)
 
 #### :boom: Breaking Change
