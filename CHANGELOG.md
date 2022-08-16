@@ -1,5 +1,19 @@
 # Changelog
 
+## v3.0.0 (2022-08-16)
+
+#### :boom: Breaking Change
+* [#47](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/47) breaking: drop support for EOL Node versions ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* [#46](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/46) update puppeteer to support M1 macs ([@mansona](https://github.com/mansona))
+* [#44](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/44) Upgrade puppeteer to the latest. ([@deanmarano](https://github.com/deanmarano))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Dean Marano ([@deanmarano](https://github.com/deanmarano))
+
+
 ## v2.1.0 (2021-04-13)
 
 #### :rocket: Enhancement
