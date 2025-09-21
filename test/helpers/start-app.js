@@ -4,10 +4,6 @@ const path = require('path');
 module.exports = async function startApp(appPath) {
   const classicAppDir = path.resolve(appPath);
   const execOpts = { cwd: classicAppDir, stderr: 'inherit', preferLocal: true };
-  console.log('installing deps');
-
-  await execa('rm', ['-rf', 'node_modules'], execOpts);
-  await execa('yarn', ['install'], execOpts);
 
   console.log('starting serve');
 

@@ -1,3 +1,7 @@
+packages: 
+  - .
+  - test/fixtures/*
+
 onlyBuiltDependencies:
   - fsevents
   - puppeteer

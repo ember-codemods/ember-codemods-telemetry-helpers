@@ -11,8 +11,8 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "lint:js": "eslint .",
-    "test": "jest . --verbose --no-watchman --runInBand --forceExit"
+    "lint": "eslint .",
+    "test": "vitest"
   },
   "jest": {
     "testEnvironment": "node"
@@ -30,10 +30,10 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "execa": "^2.1.0",
-    "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "release-it": "^14.2.1",
-    "release-it-lerna-changelog": "^3.1.0"
+    "release-it-lerna-changelog": "^3.1.0",
+    "vitest": "^3.2.4"
   },
   "engines": {
     "node": "20.* || 22.* || >= 24.*"
