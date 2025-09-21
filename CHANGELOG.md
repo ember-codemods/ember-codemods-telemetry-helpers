@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2025-09-21)
+
+* ember-codemods-telemetry-helpers 4.0.0 (major)
+
+#### :boom: Breaking Change
+* `ember-codemods-telemetry-helpers`
+  * [#48](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/48) Drop support for node < 20, start using pnpm, update puppeteer, and swap to vitest ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `ember-codemods-telemetry-helpers`
+  * [#49](https://github.com/ember-codemods/ember-codemods-telemetry-helpers/pull/49) start using release-plan for releasing ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 ## v3.0.0 (2022-08-16)
 
 #### :boom: Breaking Change
